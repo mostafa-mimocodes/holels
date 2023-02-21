@@ -11,6 +11,8 @@ Route::group(['middleware' => ['auth','lang']], function () {
 
     Route::get('/', [PagesController::class,'index'])->name('home');
 
+    Route::get('/get-chart-data',[PagesController::class,'getChartData'])->name('chart.data');
+
     //UserController Group
 
     Route::resource('roles','RoleController')->middleware('can:Manage Roles');
