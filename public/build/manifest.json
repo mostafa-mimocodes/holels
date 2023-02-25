@@ -1,0 +1,224 @@
+{
+  "resources/js/app.js": {
+    "file": "assets/app.6c94312b.js",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/Pages/Auth/ConfirmPassword.vue",
+      "resources/js/Pages/Auth/ForgotPassword.vue",
+      "resources/js/Pages/Auth/Login.vue",
+      "resources/js/Pages/Auth/Register.vue",
+      "resources/js/Pages/Auth/ResetPassword.vue",
+      "resources/js/Pages/Auth/VerifyEmail.vue",
+      "resources/js/Pages/Dashboard.vue",
+      "resources/js/Pages/Roles/FormModal.vue",
+      "resources/js/Pages/Roles/Index.vue",
+      "resources/js/Pages/Settings/Edit.vue",
+      "resources/js/Pages/Users/Create.vue",
+      "resources/js/Pages/Users/Edit.vue",
+      "resources/js/Pages/Users/Index.vue",
+      "resources/js/Pages/Users/Show.vue",
+      "resources/js/Pages/Welcome.vue"
+    ],
+    "css": [
+      "assets/app.3abef516.css"
+    ]
+  },
+  "resources/js/Pages/Auth/ConfirmPassword.vue": {
+    "file": "assets/ConfirmPassword.3d3949ae.js",
+    "src": "resources/js/Pages/Auth/ConfirmPassword.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_Button.2702345e.js",
+      "_Guest.15d579ea.js",
+      "_Label.8184c1f4.js",
+      "_ValidationErrors.3488827f.js"
+    ]
+  },
+  "_Button.2702345e.js": {
+    "file": "assets/Button.2702345e.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_Guest.15d579ea.js": {
+    "file": "assets/Guest.15d579ea.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_Label.8184c1f4.js": {
+    "file": "assets/Label.8184c1f4.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_ValidationErrors.3488827f.js": {
+    "file": "assets/ValidationErrors.3488827f.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Auth/ForgotPassword.vue": {
+    "file": "assets/ForgotPassword.7fcc7f86.js",
+    "src": "resources/js/Pages/Auth/ForgotPassword.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_Button.2702345e.js",
+      "_Guest.15d579ea.js",
+      "_Label.8184c1f4.js",
+      "_ValidationErrors.3488827f.js"
+    ]
+  },
+  "resources/js/Pages/Auth/Login.vue": {
+    "file": "assets/Login.428d204f.js",
+    "src": "resources/js/Pages/Auth/Login.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_Button.2702345e.js",
+      "_Label.8184c1f4.js"
+    ]
+  },
+  "resources/js/Pages/Auth/Register.vue": {
+    "file": "assets/Register.b34e7f2f.js",
+    "src": "resources/js/Pages/Auth/Register.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_Button.2702345e.js",
+      "_Guest.15d579ea.js",
+      "_Label.8184c1f4.js",
+      "_ValidationErrors.3488827f.js"
+    ]
+  },
+  "resources/js/Pages/Auth/ResetPassword.vue": {
+    "file": "assets/ResetPassword.32a25811.js",
+    "src": "resources/js/Pages/Auth/ResetPassword.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_Button.2702345e.js",
+      "_Guest.15d579ea.js",
+      "_Label.8184c1f4.js",
+      "_ValidationErrors.3488827f.js"
+    ]
+  },
+  "resources/js/Pages/Auth/VerifyEmail.vue": {
+    "file": "assets/VerifyEmail.3db89255.js",
+    "src": "resources/js/Pages/Auth/VerifyEmail.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_Button.2702345e.js",
+      "_Guest.15d579ea.js"
+    ]
+  },
+  "resources/js/Pages/Dashboard.vue": {
+    "file": "assets/Dashboard.10a0a8dc.js",
+    "src": "resources/js/Pages/Dashboard.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Roles/FormModal.vue": {
+    "file": "assets/FormModal.552b0b3e.js",
+    "src": "resources/js/Pages/Roles/FormModal.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/FormModal.0112c2c2.css"
+    ]
+  },
+  "resources/js/Pages/Roles/Index.vue": {
+    "file": "assets/Index.216f47a6.js",
+    "src": "resources/js/Pages/Roles/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "resources/js/Pages/Roles/FormModal.vue"
+    ]
+  },
+  "resources/js/Pages/Settings/Edit.vue": {
+    "file": "assets/Edit.04e75a4f.js",
+    "src": "resources/js/Pages/Settings/Edit.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Users/Create.vue": {
+    "file": "assets/Create.4e0cd9bd.js",
+    "src": "resources/js/Pages/Users/Create.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_UserForm.c0f4e347.js"
+    ]
+  },
+  "_UserForm.c0f4e347.js": {
+    "file": "assets/UserForm.c0f4e347.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Users/Edit.vue": {
+    "file": "assets/Edit.984b49ae.js",
+    "src": "resources/js/Pages/Users/Edit.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_UserForm.c0f4e347.js"
+    ]
+  },
+  "resources/js/Pages/Users/Index.vue": {
+    "file": "assets/Index.e90f9ef0.js",
+    "src": "resources/js/Pages/Users/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "resources/js/Pages/Roles/FormModal.vue"
+    ]
+  },
+  "resources/js/Pages/Users/Show.vue": {
+    "file": "assets/Show.c7e7458a.js",
+    "src": "resources/js/Pages/Users/Show.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Welcome.vue": {
+    "file": "assets/Welcome.f6ad28df.js",
+    "src": "resources/js/Pages/Welcome.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/Welcome.12d22b22.css"
+    ]
+  },
+  "resources/css/app.css": {
+    "file": "assets/app.0edbb908.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/Pages/Welcome.css": {
+    "file": "assets/Welcome.12d22b22.css",
+    "src": "resources/js/Pages/Welcome.css"
+  },
+  "resources/js/Pages/Roles/FormModal.css": {
+    "file": "assets/FormModal.0112c2c2.css",
+    "src": "resources/js/Pages/Roles/FormModal.css"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app.3abef516.css",
+    "src": "resources/js/app.css"
+  }
+}
