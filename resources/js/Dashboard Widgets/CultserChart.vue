@@ -2,12 +2,43 @@
     <div class="card card-custom gutter-b">
         <div class="card-header">
             <div class="card-title">
-                <h3 class="card-label">Column Chart</h3>
+                <h3 class="card-label">Count of visitors</h3>
+            </div>
+            <div class="div card-toolbar justify-content-between">
+                <div class="form-group row mb-0 mr-4">
+                    <label for="example-date-input" class="col-3 col-form-label"
+                        >From</label
+                    >
+                    <div class="col-9">
+                        <input
+                            class="form-control"
+                            type="date"
+                            id="example-date-input"
+                            v-model="from"
+                            @change="handleDateChange"
+                        />
+                    </div>
+                </div>
+                <div class="form-group row mb-0">
+                    <label for="example-date-input" class="col-3 col-form-label"
+                        >To</label
+                    >
+                    <div class="col-9">
+                        <input
+                            class="form-control"
+                            type="date"
+                            id="example-date-input"
+                            v-model="to"
+                            @change="handleDateChange"
+                        />
+                    </div>
+                </div>
             </div>
         </div>
         <div class="card-body">
             <!--begin::Chart-->
             <apexchart
+                ref="barChart"
                 height="250"
                 type="bar"
                 :options="options"
@@ -28,6 +59,9 @@ export default {
     name: "CultserChart",
     data() {
         return {
+            data: [],
+            from: "2015-06-26",
+            to: "2016-04-09",
             options: {
                 plotOptions: {
                     bar: {
@@ -45,21 +79,11 @@ export default {
                     colors: ["transparent"],
                 },
                 xaxis: {
-                    categories: [
-                        "Feb",
-                        "Mar",
-                        "Apr",
-                        "May",
-                        "Jun",
-                        "Jul",
-                        "Aug",
-                        "Sep",
-                        "Oct",
-                    ],
+                    categories: [],
                 },
                 yaxis: {
                     title: {
-                        text: "$ (thousands)",
+                        text: "No of visitors",
                     },
                 },
                 fill: {
@@ -68,27 +92,71 @@ export default {
                 tooltip: {
                     y: {
                         formatter: function (val) {
-                            return "$ " + val + " thousands";
+                            return val;
                         },
                     },
                 },
                 colors: [primary, success, warning],
             },
-            series: [
-                {
-                    name: "Net Profit",
-                    data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
-                },
-                {
-                    name: "Revenue",
-                    data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
-                },
-                {
-                    name: "Free Cash Flow",
-                    data: [35, 41, 36, 26, 45, 48, 52, 53, 41],
-                },
-            ],
+            series: [],
         };
+    },
+    mounted() {
+        this.sendRequest();
+    },
+    methods: {
+        async sendRequest() {
+            await axios
+                .get(this.route("chart.data"), {
+                    params: { chart: "cluster", from: this.from, to: this.to },
+                })
+                .then((res) => {
+                    this.data = res.data;
+                    this.updateSeriesLine();
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+        },
+        updateSeriesLine() {
+            this.$refs.barChart.updateSeries(this.data, false, true);
+            this.$refs.barChart.updateOptions({
+                xaxis: {
+                    categories: [this.dateRangeString],
+                },
+            });
+        },
+        handleDateChange() {
+            const from = new Date(this.from);
+            const to = new Date(this.to);
+
+            if (from > to) {
+                from.setDate(to.getDate() - 1);
+                from.setMonth(to.getMonth());
+                from.setFullYear(to.getFullYear());
+                this.from = this.format(from);
+            }
+
+            this.sendRequest();
+        },
+        format(inputDate) {
+            let date, month, year;
+
+            date = inputDate.getDate();
+            month = inputDate.getMonth() + 1;
+            year = inputDate.getFullYear();
+
+            date = date.toString().padStart(2, "0");
+
+            month = month.toString().padStart(2, "0");
+
+            return `${year}-${month}-${date}`;
+        },
+    },
+    computed: {
+        dateRangeString() {
+            return `From ${this.from} to ${this.to}`;
+        },
     },
 };
 </script>

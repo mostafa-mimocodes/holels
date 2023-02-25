@@ -3,7 +3,7 @@
     <div class="card card-custom gutter-b">
         <div class="card-header">
             <div class="card-title">
-                <h3 class="card-label">Column Chart</h3>
+                <h3 class="card-label">Count of bookings</h3>
             </div>
             <div class="card-toolbar">
                 <div
@@ -102,17 +102,7 @@ export default {
                     colors: ["transparent"],
                 },
                 xaxis: {
-                    categories: [
-                        "Feb",
-                        "Mar",
-                        "Apr",
-                        "May",
-                        "Jun",
-                        "Jul",
-                        "Aug",
-                        "Sep",
-                        "Oct",
-                    ],
+                    categories: [],
                 },
                 yaxis: {
                     title: {
@@ -131,12 +121,7 @@ export default {
                 },
                 colors: [success],
             },
-            series: [
-                {
-                    name: "Bookings",
-                    data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
-                },
-            ],
+            series: [],
         };
     },
     mounted() {
@@ -150,7 +135,7 @@ export default {
         async sendRequest() {
             await axios
                 .get(this.route("chart.data"), {
-                    params: { month: this.selectedMonth },
+                    params: { month: this.selectedMonth, chart: "bar" },
                 })
                 .then((res) => {
                     console.log(res);
